@@ -1,19 +1,14 @@
 <!-- Trending Now -->
+
 <taglib name="app\portal\taglib\Portal"/>
 
     <div class="trending-now">
       <div class="container relative">
-        <span class="trending-now__label">看点</span>
-        <php>
-            $where=[
-              'post.create_time'=>['egt',0]
-            ];
-        </php>        
+        <span class="trending-now__label">看点</span>       
         <ul class="newsticker">
-         
           <portal:articles id='vo' limit="5" order="post.published_time DESC"
-                 categoryIds="$theme_vars.trending">
-          <li>{$vo.post_title}</li>  
+                 categoryIds="$theme_widgets.trending_set.vars.trending">
+          <li><a href="">{$vo.post_title}</a></li>  
           </portal:articles>
         </ul>
         <div>

@@ -14,21 +14,34 @@
                 "rule": {
                     "require": true
                 }
-            },
-            "trending": {
-                "title": "轮播条",
-                "value": "",
-                "type": "text",
-                "placeholder": "请填写要轮播的菜单分类",
-                "tip": "设置后该分类下的文章将会在顶部轮播条位置播放",
-                "dataSource": {
-                    "api": "portal/category/index",
-                    "multi": true
-                },
-                "rule": {
-                    "require": true
+            }
+        },
+        "widgets": {
+
+            "trending_set":{
+                "title":"轮播图设置",
+                "display":"1",
+                "value":"",
+                "vars":{
+                    "trending": {
+                        "title": "轮播条",
+                        "value": "",
+                        "type": "text",
+                        "placeholder": "请填写要轮播的菜单分类",
+                        "tip": "设置后该分类下的文章将会在顶部轮播条位置播放",
+                        "dataSource": {
+                            "api": "portal/category/index",
+                            "multi": true
+                        },
+                        "rule": {
+                            "require": true
+                        }
+            }                     
                 }
-            }            
+            } 
+                       
         }
     }
 }
+
+
