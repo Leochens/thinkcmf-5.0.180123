@@ -19,11 +19,11 @@
                 "title": "轮播条",
                 "value": "",
                 "type": "text",
-                "placeholder": "请填写用户姓名",
-                "tip": "设置后您的姓名将会显示在首页",
+                "placeholder": "请填写要轮播的菜单分类",
+                "tip": "设置后该分类下的文章将会在顶部轮播条位置播放",
                 "dataSource": {
                     "api": "portal/category/index",
-                    "multi": false
+                    "multi": true
                 },
                 "rule": {
                     "require": true

@@ -1,12 +1,32 @@
 <!-- Trending Now -->
+<taglib name="app\portal\taglib\Portal"/>
+
     <div class="trending-now">
       <div class="container relative">
         <span class="trending-now__label">看点</span>
+        <php>
+            $where=[
+              'post.create_time'=>['egt',0]
+            ];
+        </php>        
         <ul class="newsticker">
-          <volist name='theme_vars.trending' id='item'>
-         <li>adslefhnl  {$item.post_title}</li>
-       </volist>
+         
+          <portal:articles id='vo' limit="5" order="post.published_time DESC"
+                 categoryIds="$theme_vars.trending">
+          <li>{$vo.post_title}</li>  
+          </portal:articles>
         </ul>
+        <div>
+    
+   <php>
+  $category_ids=1;
+</php>
+
+
+</div>
+<ul class="pagination">
+    <page/>
+</ul>
         <div class="newsticker-buttons">
           <button class="newsticker-button newsticker-button--prev" id="newsticker-button--prev" aria-label="next article"><i class="ui-arrow-left"></i></button>
           <button class="newsticker-button newsticker-button--next" id="newsticker-button--next" aria-label="previous article"><i class="ui-arrow-right"></i></button>

@@ -16,7 +16,7 @@ class CategoryApi
 {
     /**
      * 分类列表 用于模板设计
-     * @param array $param
+     * @param array $param 
      * @return false|\PDOStatement|string|\think\Collection
      */
     public function index($param = [])
