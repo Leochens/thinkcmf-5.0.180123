@@ -18,7 +18,7 @@ class NavMenuApi
     public function index($param = [])
     {
         $navMenuModel = new NavMenuModel();
-
+        
         $where = [];
 
         if (!empty($param['keyword'])) {
@@ -30,5 +30,12 @@ class NavMenuApi
 
         return $navMenuModel->where($where)->select();
     }
+    //zhl add
+    public function nav()
+    {
+        $navMenuModel = new NavMenuModel();
 
+
+        return $navMenuModel->where(1)->select();
+    }    
 }

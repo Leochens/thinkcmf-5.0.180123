@@ -35,10 +35,45 @@
                         },
                         "rule": {
                             "require": true
+                            }
                         }
-            }                     
+
                 }
-            } 
+            } ,
+            "category_set": {
+                        "title":"首页展示菜单",
+                        "value":"",
+                        "display":"1",
+                        "vars": {
+                           "cate": {
+                            "title": "菜单",
+                            "value": "",
+                            "type": "text",                          
+                            "placeholder":"选择菜单",
+                            "tip":"选择后将在首页进行展示",                           
+                             "dataSource":{
+                                "api":"admin/nav/index",
+                                "multi":false
+                             },           
+                            
+                            "rule": {
+                                "require": true
+                                }                             
+                           },
+                            "test": {
+                            "title": "测试",
+                            "value": "1",
+                            "type": "text",                          
+                            "placeholder":"选择菜单",
+                            "tip":"选择后将在首页进行展示",                            
+                            "rule": {
+                                "require": true
+                                }                             
+                           }                            
+                        }
+
+                        
+                    }                         
                        
         }
     }
