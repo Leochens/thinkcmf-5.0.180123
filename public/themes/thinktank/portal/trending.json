@@ -1,0 +1,11 @@
+{
+    "name": "顶部轮播条",
+    "action": "portal/Index/trending",
+    "description": "顶部轮播条",
+    "order": 5.0,
+    "more": {
+        "vars": {
+           
+        }
+    }
+}

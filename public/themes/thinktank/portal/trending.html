@@ -1,0 +1,15 @@
+<!-- Trending Now -->
+    <div class="trending-now">
+      <div class="container relative">
+        <span class="trending-now__label">看点</span>
+        <ul class="newsticker">
+          <volist name='theme_vars.trending' id='item'>
+         <li>adslefhnl  {$item.post_title}</li>
+       </volist>
+        </ul>
+        <div class="newsticker-buttons">
+          <button class="newsticker-button newsticker-button--prev" id="newsticker-button--prev" aria-label="next article"><i class="ui-arrow-left"></i></button>
+          <button class="newsticker-button newsticker-button--next" id="newsticker-button--next" aria-label="previous article"><i class="ui-arrow-right"></i></button>
+        </div>        
+      </div>
+    </div>    

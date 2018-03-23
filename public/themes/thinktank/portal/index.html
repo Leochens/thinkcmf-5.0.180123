@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <title>首页{$theme_vars.name}——{$site_info.site_name|default=''}</title>
+  <!--加载必要的文件 如css文件-->
+
+<include file='public@head_srcs' />
+
+</head>
+
+<body class="bg-light">
+
+    <main class="main oh" id="main">
+    <!--页面预加载-->
+    <include file='public@preloader' />  
+    <!--页头-->
+    <include file='public@header' /> 
+    <include file='portal@trending' />
+    <include file='public@footer' />
+
+    <div id="back-to-top">
+      <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
+    </div>
+  </main> <!-- end main-wrapper -->
+
+  
+  <!-- jQuery Scripts  包含必要js文件-->
+<include file='public@js_srcs' />
+</body>
+</html>
