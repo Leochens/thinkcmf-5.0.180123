@@ -3,16 +3,16 @@
               <div class="clearfix">
                 <div class="entry-navigation--left">
                   <i class="ui-arrow-left"></i>
-                  <span class="entry-navigation__label">Previous Post</span>
+                  <span class="entry-navigation__label">上一篇</span>
                   <div class="entry-navigation__link">
-                    <a href="#" rel="next">How to design your first mobile app</a>
+                    <a href="{:url('portal/Article/index',array('id'=>$prev_article.id))}" rel="next">{$prev_article.post_title}</a>
                   </div>
                 </div>
                 <div class="entry-navigation--right">
-                  <span class="entry-navigation__label">Next Post</span>
+                  <span class="entry-navigation__label">下一篇</span>
                   <i class="ui-arrow-right"></i>
                   <div class="entry-navigation__link">
-                    <a href="#" rel="prev">Video Youtube format post. Made with WordPress</a>
+                    <a href="{:url('portal/Article/index',array('id'=>$next_article.id))}" rel="prev">{$next_article.post_title}</a>
                   </div>
                 </div>
               </div>
