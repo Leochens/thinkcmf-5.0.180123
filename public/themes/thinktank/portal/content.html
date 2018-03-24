@@ -21,6 +21,7 @@
           </div>-->
 
           <!-- Editor's Picks -->
+
         {//include  file='index/index_component/Normals'}
 
           <!-- end editors picks -->
@@ -47,12 +48,13 @@
             <!-- Slider -->
             <div id="owl-posts" class="owl-carousel owl-theme">
 
-               
+            <portal:articles id='vo'  order="post.published_time DESC"
+                 categoryIds="$theme_widgets.more_set.vars.select">
               <article class="entry">
                 <div class="entry__img-holder">
                   <a href="">
                     <div class="thumb-container thumb-75">
-                      <img data-src="" class="entry__img owl-lazy" alt="" />
+                      <img data-src="{:cmf_get_image_url($vo.more.thumbnail)}" class="entry__img owl-lazy" alt="" />
                     </div>
                   </a>
                 </div>
@@ -60,22 +62,22 @@
                 <div class="entry__body">
                   <div class="entry__header">
                     <h2 class="entry__title entry__title--sm">
-                      <a href="</a>
+                      <a href="">{$vo.post_title}</a>
                     </h2>
                     <ul class="entry__meta">
                       <li class="entry__meta-date">
-                        <i class="ui-date"></i>
+                        <i class="ui-date">{$vo.create_time|date='Y-m-d',###}</i>
                         
                       </li>
                       <li class="entry__meta-comments">
                         <i class="ui-comments"></i>
-                        <a href="#">0</a>
+                        <a href="#">{$vo.comment_count}</a>
                       </li>
                     </ul>
                   </div>
                 </div>
               </article>
-              
+            </portal:articles>
             </div> <!-- end slider -->
 
           </section>

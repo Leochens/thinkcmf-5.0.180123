@@ -100,13 +100,13 @@
                 }
             } ,            
             "latest_set": {
-                        "title":"首页展示菜单",
+                        "title":"最新栏目展示",
                         "value":"",
                         "display":"1",
                         "vars": {
                            
                             "select": {
-                            "title": "测试",
+                            "title": "最新栏目展示",
                             "value": "1",
                             "type": "text",                          
                             "placeholder":"选择最新菜单",
@@ -119,10 +119,30 @@
                                 "require": true
                                 }                             
                            }                            
-                        }
-
-                        
-                    }                         
+                        } 
+                    },
+            "more_set": {
+                        "title":"更多展示菜单",
+                        "value":"",
+                        "display":"1",
+                        "vars": {
+                           
+                            "select": {
+                            "title": "更多展示菜单",
+                            "value": "1",
+                            "type": "text",                          
+                            "placeholder":"选择菜单",
+                            "tip":"选择后将在首页进行展示",  
+                            "dataSource": {
+                                "api": "portal/category/index",
+                                "multi": false
+                            },                         
+                            "rule": {
+                                "require": true
+                                }                             
+                           }                            
+                        } 
+                    }                                       
                        
         }
     }
