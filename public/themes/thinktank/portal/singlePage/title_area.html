@@ -1,0 +1,27 @@
+
+<!--此处模板包含文章的标题 标签 日期 作者 评论数量 首页图-->
+
+<div class="single-post__entry-header entry__header">
+              <a href="#" class="entry__meta-category">{$article.post_keywords}</a>
+              <h1 class="single-post__entry-title">
+                {$article.post_title}
+              </h1>
+
+              <ul class="entry__meta">
+                <li class="entry__meta-author">
+                  <i class="ui-author"></i>
+                  <a href="#">{$article.post_source}</a>
+                </li>
+                <li class="entry__meta-date">
+                  <i class="ui-date"></i>
+                  {$article.create_time|date='Y-m-d',###}
+                </li>
+                <li class="entry__meta-comments">
+                  <i class="ui-comments"></i>
+                  <a href="#">{$article.comment_count}}</a>
+                </li>
+              </ul>
+            </div>
+<div class="entry__img-holder">
+              <img src="{:cmf_get_image_url($article.more.thumbnail)}" alt="{$article.post_title}" class="entry__img">
+            </div>

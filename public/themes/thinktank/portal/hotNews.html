@@ -38,7 +38,7 @@
                   <div class="col-md-6">
                     <article class="entry">
                       <div class="entry__img-holder">
-                        <a href="">
+                        <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">
                           <div class="thumb-container thumb-75">
                             <img data-src="{:cmf_get_image_url($vo.more.thumbnail)}" src="{:cmf_get_image_url($vo.more.thumbnail)}" class="entry__img lazyload" alt="{$vo.post_title}" />
                           </div>
