@@ -8,13 +8,11 @@
         <ul class="newsticker">
           <portal:articles id='vo' limit="10" order="post.published_time DESC"
                  categoryIds="$theme_widgets.trending_set.vars.trending">
-          <li><a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a></li>  
+          <li class="newsticker__item"><a class="newsticker__item-url" href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a></li> 
           </portal:articles>
         </ul>
         <div>
     
-
-
 </div>
 <ul class="pagination">
     <page/>

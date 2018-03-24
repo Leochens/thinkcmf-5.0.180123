@@ -1,10 +1,10 @@
 {
-  "name": "thinktank",
-  "version": "1.0.2",
-  "demo_url": "http://demo.thinkcmf.com",
-  "author": "ThinkCMF",
+  "name": "ThinkTank",
+  "version": "2.1",
+  "demo_url": "",
+  "author": "张鹤麟Leochens",
   "lang": "zh-cn",
-  "author_url": "http://www.thinkcmf.com",
-  "keywords": "智库模板",
-  "description": "智库默认模板"
+  "author_url": "http://blog.mokis.com",
+  "keywords": "智库框架",
+  "description": "智库默认框架"
 }

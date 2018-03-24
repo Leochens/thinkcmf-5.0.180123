@@ -9,7 +9,7 @@
 // | Author: 老猫 <thinkcmf@126.com>
 // +----------------------------------------------------------------------
 return [
-    'ADMIN_CENTER'                       => '后台管理中心',
+    'ADMIN_CENTER'                       => '管理中心',
     'WELCOME_USER'                       => '欢迎, {:user_nickname}',
     'REFRESH_CURRENT_PAGE'    => '刷新当前页面',
     'CLOSE_TOP_MENU'    => '关闭顶部菜单',

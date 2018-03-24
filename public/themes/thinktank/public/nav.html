@@ -10,56 +10,49 @@
               <span class="nav-icon-toggle__box">
                 <span class="nav-icon-toggle__inner"></span>
               </span>
-            </button> <!-- end Side menu button -->
+            </button> 
+          <!-- end Side menu button -->
 
             <!-- Mobile logo -->
             <a href="index.html" class="logo logo--mobile d-lg-none">
               <img class="logo__img" src="img/logo_mobile.png" srcset="img/logo_mobile.png 1x, img/logo_mobile@2x.png 2x" alt="logo">
             </a>
 
+            <navigation nav-id="$theme_widgets.category_set.vars.cate" root="ul" id="main-navigation" class="nav navbar-nav navbar-nav-custom">
+              <navigationMenu root="li" class="menu-item menu-item-level-{$level}">
+                  <a href="{$menu.href|default=''}" target="{$menu.target|default=''}">{$menu.name|default=''}</a>
+              </navigationMenu>
+              <navigationFolder root="li" class="dropdown dropdown-custom dropdown-custom-level-{$level}" dropdown="ul"
+                                dropdown-class="dropdown-menu dropdown-menu-level-{$level}">
+                  <a href="#" class="dropdown-toggle dropdown-toggle-{$level}" data-toggle="dropdown">
+                      {$menu.name|default=''}<span class="caret"></span>
+                  </a>
+              </navigationFolder>
+            </navigation>
+
+
+
+
             <!-- Nav-wrap -->
-            <nav class="flex-child nav__wrap d-none d-lg-block">              
-              <ul class="nav__menu">
+            <nav class="flex-child nav__wrap d-none d-lg-block">
+            <navigation nav-id="1" root="ul" id="main-navigation" class="nav__menu">              
+              <!-- <ul class="nav__menu"> -->
+              <navigationMenu root="li" class="nav__dropdown">
+                  <a href="{$menu.href|default=''}" target="{$menu.target|default=''}">{$menu.name|default=''}</a>
+              </navigationMenu>                      
+    
+              <navigationFolder root="li" class="nav__dropdown-menu" dropdown="ul"
+                                dropdown-class="dropdown-menu dropdown-menu-level-{$level}">
 
-                <li class="active">
-                  <a href="index.html">智库首页</a>
-                </li>
+                  <a href="#" data-toggle="dropdown">
+                      {$menu.name|default=''}<span class="caret"></span>
+                  </a>
+              </navigationFolder>    
 
-                <li class="nav__dropdown">
-                  <a href="#">研究团队</a>
-                  <ul class="nav__dropdown-menu">
-                    <li><a href="#">Gallery Post</a></li>
-                    <li><a href="#">V0ideo Post</a></li>
-                    <li><a href="#">Audio Post</a></li>
-                    <li><a href="#">Quote Post</a></li>
-                  </ul>
-                </li>
+               
 
-                <li class="nav__dropdown">
-                  <a href="#">研究成果</a>
-                  <ul class="nav__dropdown-menu">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Search Results</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">404</a></li>
-                  </ul>
-                </li>
-
-                <li class="nav__dropdown">
-                  <a href="#">关于我们</a>
-                  <ul class="nav__dropdown-menu">
-                    <li><a href="#">Lazy Load</a></li>
-                    <li><a href="#">Shortcodes</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="#">中外智库</a>
-                </li>
-
-
-              </ul> <!-- end menu -->
+             <!--  </ul> --> <!-- end menu -->
+           </navigation>
             </nav> <!-- end nav-wrap -->
 
             <!-- Nav Right -->
