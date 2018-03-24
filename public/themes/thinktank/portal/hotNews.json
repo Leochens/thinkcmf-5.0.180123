@@ -1,0 +1,21 @@
+{
+    "name":"hotNews",
+    "action": "",
+    "description": "热点分类",
+    "order": 6.0,   
+    "more":{
+        "vars": {
+            "text":{                    
+                "title":"hotNews测试",
+                "type":"text",
+                "value":"",
+                "placeholder": "请填写一段文字",
+                "tip": "设置后。。",
+                "rule": {
+                    "require":true
+                }
+            }
+        }
+    } 
+
+}

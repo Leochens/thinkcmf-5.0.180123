@@ -58,11 +58,12 @@ class CategoryApi
 
         return $return;
     }
+    
     public function cate(){
         $portalCategoryModel = new PortalCategoryModel();
         $where = ['delete_time' => 0];
         $categories = $portalCategoryModel->where($where)->select();
-
+        
         return $categories;
     }
 

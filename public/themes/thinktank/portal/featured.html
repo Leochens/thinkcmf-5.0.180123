@@ -25,7 +25,7 @@
                       <div class="bottom-gradient"></div>                   
                     <else/>
 
-                    <div class="thumb-bg-holder owl-lazy" data-src="{:cmf_get_image_url($vo.more.thumbnail)}">
+                    <div class="thumb-bg-holder owl-lazy" data-src="{:cmf_get_image_url($vo.more.thumbnail)}"> 
                       <img class="d-none" src="{:cmf_get_image_url($vo.more.thumbnail)}"
                             alt="{$vo.post_title}"/>
                     </div>
@@ -52,7 +52,7 @@
 <portal:articles limit="2" order="post.published_time DESC"
                  categoryIds="$theme_widgets.feature_set.vars.Small">          
           <article class="entry featured-posts-grid__entry">
-            <div class="thumb-bg-holder" style="background-image: url($vo.more.thumbnail));">
+            <div class="thumb-bg-holder" style="background-image: url({$vo.more.thumbnail});">
               <a href="" class="thumb-url"></a>
               <div class="bottom-gradient"></div>
             </div>
