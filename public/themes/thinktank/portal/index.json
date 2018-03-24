@@ -142,7 +142,29 @@
                                 }                             
                            }                            
                         } 
-                    }                                       
+                    },
+            "focus_set": {
+                        "title":"右侧边栏聚焦",
+                        "value":"",
+                        "display":"1",
+                        "vars": {
+                           
+                            "select": {
+                            "title": "右侧边栏聚焦",
+                            "value": "1",
+                            "type": "text",                          
+                            "placeholder":"选择菜单",
+                            "tip":"选择后将在首页进行展示",  
+                            "dataSource": {
+                                "api": "portal/category/index",
+                                "multi": false
+                            },                         
+                            "rule": {
+                                "require": true
+                                }                             
+                           }                            
+                        } 
+                    }                                                                    
                        
         }
     }

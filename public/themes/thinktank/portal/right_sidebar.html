@@ -421,25 +421,26 @@
           <div class="widget">
             <h4 class="widget-title">聚焦</h4>
             <div id="owl-single" class="owl-carousel owl-theme">
-            {foreach $hot as $item }
-            <article class="entry">
-                <div class="entry__img-holder mb-0">
-                  <a href="{$single_route}{$item.id}">
-                    <div class="thumb-bg-holder">
-                      <img data-src="{$item.pic_path}" class="entry__img owl-lazy" alt="">
-                      <div class="bottom-gradient"></div>
+              <portal:articles limit="5" order="post.published_time DESC"
+                 categoryIds="$theme_widgets.focus_set.vars.select"> 
+                <article class="entry">
+                    <div class="entry__img-holder mb-0">
+                      <a href="{$vo.id}">
+                        <div class="thumb-bg-holder">
+                          <img data-src="{:cmf_get_image_url($vo.more.thumbnail)}" class="entry__img owl-lazy" alt="{$vo.post_title}">
+                          <div class="bottom-gradient"></div>
+                        </div>
+                      </a>
                     </div>
-                  </a>
-                </div>
 
-                <div class="thumb-text-holder">  
-                  <h2 class="thumb-entry-title thumb-entry-title--sm">
-                    <a href="{$single_route}{$item.id}">{$item.title}</a>
-                  </h2>
-                </div>
-            </article>
+                    <div class="thumb-text-holder">  
+                      <h2 class="thumb-entry-title thumb-entry-title--sm">
+                        <a href="{$vo.id}">{$vo.post_title}</a>
+                      </h2>
+                    </div>
+                </article>
+             </portal:articles>
            
-            {/foreach}
             </div>
           </div>
 
@@ -447,19 +448,22 @@
           <div class="widget widget-reviews">
             <h4 class="widget-title">更多</h4>
             <ul class="post-list-small">
-            {foreach $hot as $item}
+            
+            <portal:articles limit="5" order="post.published_time DESC"
+                 categoryIds="$theme_widgets.focus_set.vars.select">             
               <li class="post-list-small__item">
+
                 <article class="post-list-small__entry clearfix">
                   <div class="post-list-small__img-holder">
                     <div class="thumb-container thumb-75">
-                      <a href="{$single_route}{$item.id}">
-                        <img data-src="{$item.pic_path}" src="{$item.pic_path}" alt="" class=" lazyload">
+                      <a href="{$vo.id}">
+                        <img data-src="{:cmf_get_image_url($vo.more.thumbnail)}" src="{:cmf_get_image_url($vo.more.thumbnail)}" alt="{$vo.post_title}" class=" lazyload">
                       </a>
                     </div>
                   </div>
                   <div class="post-list-small__body">
                     <h3 class="post-list-small__entry-title">
-                      <a href="{$single_route}{$item.id}">{$item.title}</a>
+                      <a href="{$vo.id}">{$vo.post_title}</a>
                     </h3>
                     <ul class="entry__meta">
                       <li class="entry__meta-rating">
@@ -474,7 +478,7 @@
                 </article>
               </li>
                 
-            {/foreach}              
+           </portal:articles>            
             </ul>
           </div>
 
