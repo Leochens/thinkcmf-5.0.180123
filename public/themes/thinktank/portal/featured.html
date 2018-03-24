@@ -8,10 +8,10 @@
         <div class="featured-posts-grid__item featured-posts-grid__item--lg">
           <div id="owl-hero-grid" class="owl-carousel owl-theme owl-carousel--dots-inside">
             <!--首页轮播大图-->
-          <php>$category_ids = 1;</php>
+          
 
           <portal:articles limit="5" order="post.published_time DESC"
-                 categoryIds="$category_ids">            
+                 categoryIds="$theme_widgets.feature_set.vars.Big">            
             <article class="entry featured-posts-grid__entry">
              
               <!--判断是否存在缩略图-->
@@ -50,7 +50,7 @@
        
         <div class="featured-posts-grid__item featured-posts-grid__item--sm">        
 <portal:articles limit="2" order="post.published_time DESC"
-                 categoryIds="$category_ids">          
+                 categoryIds="$theme_widgets.feature_set.vars.Small">          
           <article class="entry featured-posts-grid__entry">
             <div class="thumb-bg-holder" style="background-image: url($vo.more.thumbnail));">
               <a href="" class="thumb-url"></a>

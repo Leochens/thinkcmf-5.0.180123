@@ -19,7 +19,7 @@
         "widgets": {
 
             "trending_set":{
-                "title":"轮播图设置",
+                "title":"轮播条设置",
                 "display":"1",
                 "value":"",
                 "vars":{
@@ -40,6 +40,42 @@
 
                 }
             } ,
+            "feature_set":{
+                "title":"轮播图设置",
+                "display":"1",
+                "value":"",
+                "vars":{
+                    "Big": {
+                        "title": "大轮播图",
+                        "value": "",
+                        "type": "text",
+                        "placeholder": "选择要轮播的菜单",
+                        "tip": "设置后该分类下的文章将会在首页轮播大图位置播放",
+                        "dataSource": {
+                            "api": "portal/category/index",
+                            "multi": true
+                        },
+                        "rule": {
+                            "require": true
+                            }
+                        },
+                    "Small": {
+                        "title": "小侧图",
+                        "value": "",
+                        "type": "text",
+                        "placeholder": "选择要展示的菜单",
+                        "tip": "设置后该分类下的文章将会在首页轮播大图旁的侧图位置播放",
+                        "dataSource": {
+                            "api": "portal/category/index",
+                            "multi": true
+                        },
+                        "rule": {
+                            "require": true
+                            }
+                        }                      
+
+                }
+            } ,            
             "category_set": {
                         "title":"首页展示菜单",
                         "value":"",
