@@ -6,9 +6,9 @@
       <div class="container relative">
         <span class="trending-now__label">看点</span>       
         <ul class="newsticker">
-          <portal:articles id='vo' limit="5" order="post.published_time DESC"
+          <portal:articles id='vo' limit="10" order="post.published_time DESC"
                  categoryIds="$theme_widgets.trending_set.vars.trending">
-          <li><a href="">{$vo.post_title}</a></li>  
+          <li><a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a></li>  
           </portal:articles>
         </ul>
         <div>

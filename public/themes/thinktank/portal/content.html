@@ -52,7 +52,7 @@
                  categoryIds="$theme_widgets.more_set.vars.select">
               <article class="entry">
                 <div class="entry__img-holder">
-                  <a href="">
+                  <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">
                     <div class="thumb-container thumb-75">
                       <img data-src="{:cmf_get_image_url($vo.more.thumbnail)}" class="entry__img owl-lazy" alt="" />
                     </div>
@@ -62,7 +62,7 @@
                 <div class="entry__body">
                   <div class="entry__header">
                     <h2 class="entry__title entry__title--sm">
-                      <a href="">{$vo.post_title}</a>
+                      <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
                     </h2>
                     <ul class="entry__meta">
                       <li class="entry__meta-date">

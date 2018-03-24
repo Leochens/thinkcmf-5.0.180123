@@ -21,7 +21,7 @@
                       <img class="d-none" src="__TMPL__/public/assets/images/default_tupian4.png"
                             alt="{$vo.post_title}"/>
                     </div>  
-                      <a href="" class="thumb-url"></a>
+                      <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="thumb-url"></a>
                       <div class="bottom-gradient"></div>                   
                     <else/>
 
@@ -30,14 +30,14 @@
                             alt="{$vo.post_title}"/>
                     </div>
 
-                      <a href="" class="thumb-url"></a>
+                      <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="thumb-url"></a>
                       <div class="bottom-gradient"></div>    
                 </if>
                 
               <div class="thumb-text-holder">
-                <a href="" class="entry__meta-category entry__meta-category-color entry__meta-category-color--salad">{$vo.post_keywords}</a>   
+                <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="entry__meta-category entry__meta-category-color entry__meta-category-color--salad">{$vo.post_keywords}</a>   
                 <h2 class="thumb-entry-title">
-                  <a href="">{$vo.post_title}</a>
+                  <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
                 </h2>
               </div>
             </article>
@@ -53,13 +53,13 @@
                  categoryIds="$theme_widgets.feature_set.vars.Small">          
           <article class="entry featured-posts-grid__entry">
             <div class="thumb-bg-holder" style="background-image: url({$vo.more.thumbnail});">
-              <a href="" class="thumb-url"></a>
+              <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="thumb-url"></a>
               <div class="bottom-gradient"></div>
             </div>
 
             <div class="thumb-text-holder">  
               <h2 class="thumb-entry-title thumb-entry-title--sm">
-                <a href="">{$vo.post_title}</a>
+                <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
               </h2>
               <ul class="entry__meta">
                 <li class="entry__meta-author">

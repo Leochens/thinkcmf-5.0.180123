@@ -425,7 +425,7 @@
                  categoryIds="$theme_widgets.focus_set.vars.select"> 
                 <article class="entry">
                     <div class="entry__img-holder mb-0">
-                      <a href="{$vo.id}">
+                      <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">
                         <div class="thumb-bg-holder">
                           <img data-src="{:cmf_get_image_url($vo.more.thumbnail)}" class="entry__img owl-lazy" alt="{$vo.post_title}">
                           <div class="bottom-gradient"></div>
@@ -435,7 +435,7 @@
 
                     <div class="thumb-text-holder">  
                       <h2 class="thumb-entry-title thumb-entry-title--sm">
-                        <a href="{$vo.id}">{$vo.post_title}</a>
+                        <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
                       </h2>
                     </div>
                 </article>
@@ -456,14 +456,14 @@
                 <article class="post-list-small__entry clearfix">
                   <div class="post-list-small__img-holder">
                     <div class="thumb-container thumb-75">
-                      <a href="{$vo.id}">
+                      <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">
                         <img data-src="{:cmf_get_image_url($vo.more.thumbnail)}" src="{:cmf_get_image_url($vo.more.thumbnail)}" alt="{$vo.post_title}" class=" lazyload">
                       </a>
                     </div>
                   </div>
                   <div class="post-list-small__body">
                     <h3 class="post-list-small__entry-title">
-                      <a href="{$vo.id}">{$vo.post_title}</a>
+                      <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
                     </h3>
                     <ul class="entry__meta">
                       <li class="entry__meta-rating">

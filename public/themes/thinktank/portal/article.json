@@ -1,6 +1,6 @@
 {
     "name": "文章详情页",
-    "action": "portal/Article/index",
+    "action": "portal/Article/index", 
     "description": "单页面模板文件",
     "order": 10.0,
     "more": {
