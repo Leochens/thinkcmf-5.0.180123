@@ -3,37 +3,36 @@
               <h3 class="section-title">最新</h3>
               <a href="#" class="all-posts-url">查看全部</a>
             </div>
-          
-      
-             {volist name='latest' id='item' length='4'}
-            <article class="entry post-list" style="height: 250px;">
+           
+            <portal:articles id='vo' limit="4" order="post.published_time DESC" categoryIds="$theme_widgets.latest_set.vars.select">  
+              <article class="entry post-list" style="height: 250px;">
               <div class="entry__img-holder post-list__img-holder">
-                <a href="{$single_route}{$item.id}">
+                <a href="{$vo.id}">
                   <div class="thumb-container thumb-75">
-                    <img data-src="{$item.pic_path}" src="img/empty.png" class="entry__img lazyload" alt="">
+                    <img data-src="{:cmf_get_image_url($vo.more.thumbnail)}" src="{:cmf_get_image_url($vo.more.thumbnail)}" class="entry__img lazyload" alt="">
                   </div>
                 </a>
               </div>
 
               <div class="entry__body post-list__body" style="max-height: 250px;" >
                 <div class="entry__header">
-                  <a href="#" class="entry__meta-category">{$item.tags}</a>
+                  <a href="#" class="entry__meta-category">{$vo.post_keywords}</a>
                   <h2 class="entry__title">
-                    <a href="{$single_route}{$item.id}">{$item.title}</a>
+                    <a href="{$vo.id}">{$vo.post_title}</a>
                   </h2>
                   <ul class="entry__meta">
                     <li class="entry__meta-author">
                       <i class="ui-author"></i>
-                      <a href="#">{$item.author}</a>
+                      <a href="#">{$vo.post_source}</a>
                     </li>
                     <li class="entry__meta-date">
                       <i class="ui-date"></i>
-                  {$item.dateline|date='Y-m-d',###}
+                  {$vo.create_time|date='Y-m-d',###}
                       
                     </li>
                     <li class="entry__meta-comments" >
                       <i class="ui-comments"></i>
-                      <a href="#">0</a>
+                      <a href="#">{$vo.comment_count}</a>
                     </li>
                   </ul>
                 </div>
@@ -41,12 +40,12 @@
                     <!--此处技术点 
                         用samrty的strip_tags去除标签 再截取200个字符 结尾省略号
                         -->
-                  <p>{$item.content|strip_tags|substr=0,300}</p>
+                  <p>{$vo.post_content|strip_tags|substr=0,300}</p>
                 </div>
               </div>
             </article>
-              
-            {/volist}
+            </portal:articles>
+            
  
            
           </section> <!-- end latest news -->

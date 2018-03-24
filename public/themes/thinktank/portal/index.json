@@ -5,19 +5,9 @@
     "order": 5.0,
     "more": {
         "vars": {
-            "name": {
-                "title": "姓名",
-                "value": "张鹤麟",
-                "type": "text",
-                "placeholder": "请填写用户姓名",
-                "tip": "设置后您的姓名将会显示在首页",
-                "rule": {
-                    "require": true
-                }
-            },
-            "cate2": {
-                "title": "菜单",
-                "value": [],
+            "cate_hot":{
+                "title": "热点菜单",
+                "value": "",
                 "type": "array",                          
                 "placeholder":"选择菜单",
                 "tip":"选择后将在首页进行展示",                           
@@ -43,30 +33,12 @@
                         "rule": {
                             "require": true
                         }
-                    },
-                    "icon": {
-                        "title": "图标",
-                        "value": "",
-                        "type": "text",
-                        "tip": "这是一个测试",
-                        "rule": {
-                            "require": true
-                        }
-                    },
-                    "content": {
-                        "title": "描述",
-                        "value": "",
-                        "type": "text",
-                        "tip": "这是一个测试",
-                        "rule": {
-                            "require": true
-                        }
                     }
                 },
                 "rule": {
-                    "require": true
+                    "require": false
                     }                             
-               }            
+            }
         },
         "widgets": {
             "trending_set":{
@@ -127,18 +99,22 @@
 
                 }
             } ,            
-            "category_set": {
+            "latest_set": {
                         "title":"首页展示菜单",
                         "value":"",
                         "display":"1",
                         "vars": {
                            
-                            "test": {
+                            "select": {
                             "title": "测试",
                             "value": "1",
                             "type": "text",                          
-                            "placeholder":"选择菜单",
-                            "tip":"选择后将在首页进行展示",                            
+                            "placeholder":"选择最新菜单",
+                            "tip":"选择后将在首页进行展示",  
+                            "dataSource": {
+                                "api": "portal/category/index",
+                                "multi": false
+                            },                         
                             "rule": {
                                 "require": true
                                 }                             

@@ -17,7 +17,7 @@
         <h3 class="section-title">热点</h3>
         <div class="tabs tab-post__tabs"> 
             <ul class="tabs__list">
-                <volist name="$theme_vars.cate2" id='vo'>
+                <volist name="$theme_vars.cate_hot" id='vo'>
                 <li class="tabs__item">
                      <a href="#tab-{$vo.select}" target="" class="tabs__trigger">{$vo.title}</a>
                 </li>
@@ -29,7 +29,7 @@
 
      <!--    <navigationMenu root="div"  class="tabs__content tabs__content-trigger tab-post__tabs-content"> -->
         <div class="tabs__content tabs__content-trigger tab-post__tabs-content">
-            <volist name="$theme_vars.cate2" id='cate_item'>
+            <volist name="$theme_vars.cate_hot" id='cate_item'>
 
           <div class="tabs__content-pane tabs__content-pane--active" id="tab-{$cate_item.select}">
             <div class="row">

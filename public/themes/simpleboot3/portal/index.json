@@ -9,12 +9,12 @@
                 "title": "顶部幻灯片",
                 "value": "",
                 "type": "text",
+                "placeholder": "请选择顶部幻灯片",
+                "tip": "顶部幻灯片",
                 "dataSource": {
                     "api": "admin/Slide/index",
                     "multi": false
-                },
-                "placeholder": "请选择顶部幻灯片",
-                "tip": "顶部幻灯片",
+                },                
                 "rule": {
                     "require": true
                 }
