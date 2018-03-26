@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <title>{$page.post_title}</title>
+
+  
+  <include file='public@head_srcs'>
+</head>
+
+<body class="bg-light single-post">
+
+  <include file='public@preloader'>
+  
+
+  <main class="main oh" id="main">
+  <!--页头-->
+  <include file='public@header'>
+    
+   
+    <div class="main-container container" id="main-container">
+
+      <!-- Content -->
+      <div class="row">
+            
+        <!-- post content -->
+        <div class="col-lg-8 blog__content mb-30">
+
+          <!-- Breadcrumbs -->
+          
+
+          <!-- standard post -->
+          <article class="entry">
+            <!--此处模板包含文章的标题 标签 日期 作者 评论数量 首页图-->
+                <div class="entry__article">
+                  <!--文章主体-->
+                  {$page.post_content}
+
+                  <!-- tags -->
+                  <div class="entry__tags">
+                    <span class="entry__tags-label">Tags:</span>
+                    <a href="#" rel="tag">{$page.post_keywords}</a>
+                  </div> <!-- end tags -->
+
+                </div> <!-- end entry article -->   
+          </article> 
+        </div> <!-- end col -->
+      </div> <!-- end content -->
+    </div> <!-- end main container -->
+    <!-- Footer -->
+    <include file='public@footer'>
+
+  </main> <!-- end main-wrapper -->
+
+  
+  <!-- jQuery Scripts -->
+  <include file='public@js_srcs'>
+ 
+
+</body>
+</html>
