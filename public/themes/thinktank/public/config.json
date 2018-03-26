@@ -1,0 +1,44 @@
+{
+    "name": "ThinkTank全局配置",
+    "action": "public/Config",
+    "description": "ThinkTank全局配置文件",
+    "is_public": "1",
+    "order": 0.0,
+    "more": {
+        "vars": {
+            "enable_mobile": {
+                "title": "手机注册",
+                "value": "ThinkCMF",
+                "type": "select",
+                "value": 1,
+                "options": {
+                    "1": "开启",
+                    "0": "关闭"
+                },
+                "tip": ""
+            }
+        },
+        "widgets":{
+             "footer_des":{
+                            "title":"页脚说明文字",
+                            "display":"1",
+                            "vars":{
+                                "footer":{
+                                "title":"页脚说明文字",
+                                "value":"页脚说明文字：页脚空空如也~",
+                                "type":"text",
+                                "placeholder":"添加页脚话语",
+                                "tips":"添加后将在首页页脚处显示",
+                                "rule":{
+                                    "require":true
+                                    }                 
+                                }
+                            },
+                            "rule":{
+                                "require":true
+                            }
+                            
+                        }             
+        }
+    }
+}

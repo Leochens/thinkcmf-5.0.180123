@@ -5,7 +5,6 @@
     "order": 10.0,
     "more": {
         "vars": {
-
         },
         "widgets":{
             "hottest_articles": {
