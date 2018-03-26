@@ -7,91 +7,25 @@
         <i class="ui-close sidenav__close-icon"></i>
       </button>
     </div>
-
-
-    
+    <!--左侧边栏-->
     <nav class="sidenav__menu-container">
       <ul class="sidenav__menu" role="menubar">
         <!-- Categories -->
-        <li>
-          <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--orange">思政</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--blue">十九大</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--red">科技</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--salad">人文</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--purple">生态</a>
-        </li>
-        <!--<li>
-          <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--yellow">Fashion</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--light-blue">Sport</a>
-        </li>
-        <li>
-          <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--violet">Science</a>
-        </li>
-
-        <li>
-          <a href="#" class="sidenav__menu-link">Posts</a>
-          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-          <ul class="sidenav__menu-dropdown">
-            <li><a href="#" class="sidenav__menu-link">Gallery Post</a></li>
-            <li><a href="#" class="sidenav__menu-link">Video Post</a></li>
-            <li><a href="#" class="sidenav__menu-link">Audio Post</a></li>
-            <li><a href="#" class="sidenav__menu-link">Quote Post</a></li>
-          </ul>
-        </li>
-
-        <li>
-          <a href="#" class="sidenav__menu-link">Pages</a>
-          <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
-          <ul class="sidenav__menu-dropdown">
-            <li><a href="#" class="sidenav__menu-link">about</a></li>
-            <li><a href="#" class="sidenav__menu-link">Contact</a></li>
-            <li><a href="#" class="sidenav__menu-link">Search Results</a></li>
-            <li><a href="#" class="sidenav__menu-link">Categories</a></li>
-            <li><a href="#" class="sidenav__menu-link">Shortcodes</a></li>
-            <li><a href="#" class="sidenav__menu-link">Lazyload</a></li>
-            <li><a href="#" class="sidenav__menu-link">404</a></li>
-          </ul>
-        </li>-->
-
-        <li>
-          <a href="#" class="sidenav__menu-link">关于我们</a>
-        </li>
-
-        <li>
-          <a href="#" class="sidenav__menu-link">联系我们</a>
-        </li>
-
-        <li>
-          <a href="#" class="sidenav__menu-link">广告投放</a>
-        </li>
+    <navigation nav-id="1" root="">
+        <navigationMenu root="li" class="">
+            <a class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--blue" href="{$menu.href|default=''}" target="{$menu.target|default=''}">{$menu.name|default=''}</a>
+        </navigationMenu>    
+        <navigationFolder root="li" class="" dropdown="ul" dropdown-class="sidenav__menu-dropdown">
+            
+            <a href="#" class="sidenav__menu-link sidenav__menu-link-category sidenav__menu-link--violet" data-toggle="dropdown">
+                {$menu.name|default=''}<span class="caret"></span>
+            </a>
+            <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown"><i class="ui-arrow-down"></i></button>
+        
+        </navigationFolder>        
+      </navigation>
       </ul>
     </nav>
 
-   <!-- <div class="socials sidenav__socials"> 
-      <a class="social social-facebook" href="#" target="_blank" aria-label="facebook">
-        <i class="ui-facebook"></i>
-      </a>
-      <a class="social social-twitter" href="#" target="_blank" aria-label="twitter">
-        <i class="ui-twitter"></i>
-      </a>
-      <a class="social social-google-plus" href="#" target="_blank" aria-label="google">
-        <i class="ui-google"></i>
-      </a>
-      <a class="social social-youtube" href="#" target="_blank" aria-label="youtube">
-        <i class="ui-youtube"></i>
-      </a>
-      <a class="social social-instagram" href="#" target="_blank" aria-label="instagram">
-        <i class="ui-instagram"></i>
-      </a>
-    </div>-->
+  
   </header> <!-- end sidenav -->
