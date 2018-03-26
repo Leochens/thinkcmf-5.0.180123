@@ -185,7 +185,28 @@
                             }
                         }                        
                     }         
-            }                                                                                                  
+            },
+            "l_sidebar_set":{
+                "title":"左侧导航设置",
+                "display":"1",
+                "value":"",
+                "vars":{
+                    "sidebar_value":{
+                        "title":"左侧导航设置",
+                        "tip":"",
+                        "value":"1",
+                        "type":"text",
+                        "placeholder":"",
+                        "dataSource":{
+                            "api":"admin/Nav/index",
+                            "multi" :false  
+                            },
+                        "rules":{
+                            "require":true
+                            }
+                        }                        
+                    }         
+            }                                                                                                              
         }
     }
 }
