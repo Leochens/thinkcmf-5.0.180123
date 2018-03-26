@@ -3,7 +3,7 @@
     "action": "portal/Index/index",
     "description": "智库首页模板文件",
     "order": 5.0,
-    "more": {
+    "more":{
         "vars": {
             "cate_hot":{
                 "title": "热点菜单",
@@ -40,7 +40,7 @@
                     }                             
             }
         },
-        "widgets": {
+        "widgets":{
             "trending_set":{
                 "title":"轮播条设置",
                 "display":"1",
@@ -62,7 +62,7 @@
                         }
 
                 }
-            } ,
+            },
             "feature_set":{
                 "title":"轮播图设置",
                 "display":"1",
@@ -98,8 +98,8 @@
                         }                      
 
                 }
-            } ,            
-            "latest_set": {
+            },            
+            "latest_set":{
                         "title":"最新栏目展示",
                         "value":"",
                         "display":"1",
@@ -120,7 +120,7 @@
                                 }                             
                            }                            
                         } 
-                    },
+            },
             "more_set": {
                         "title":"更多展示菜单",
                         "value":"",
@@ -142,7 +142,7 @@
                                 }                             
                            }                            
                         } 
-                    },
+            },
             "focus_set": {
                         "title":"右侧边栏聚焦",
                         "value":"",
@@ -164,8 +164,28 @@
                                 }                             
                            }                            
                         } 
-                    }                                                                                     
-                       
+            },
+            "nav_set":{
+                "title":"首页导航设置",
+                "display":"1",
+                "value":"",
+                "vars":{
+                    "nav_value":{
+                        "title":"首页导航设置",
+                        "tip":"",
+                        "value":"1",
+                        "type":"text",
+                        "placeholder":"",
+                        "dataSource":{
+                            "api":"admin/Nav/index",
+                            "multi" :false  
+                            },
+                        "rules":{
+                            "require":true
+                            }
+                        }                        
+                    }         
+            }                                                                                                  
         }
     }
 }

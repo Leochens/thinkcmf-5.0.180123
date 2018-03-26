@@ -6,9 +6,9 @@
     "order": 0.0,
     "more": {
         "vars": {
-            "enable_mobile": {
-                "title": "手机注册",
-                "value": "ThinkCMF",
+            "var1": {
+                "title": "var1",
+                "value": "var1",
                 "type": "select",
                 "value": 1,
                 "options": {
@@ -20,23 +20,23 @@
         },
         "widgets":{
              "footer_des":{
-                            "title":"页脚说明文字",
-                            "display":"1",
-                            "vars":{
-                                "footer":{
-                                "title":"页脚说明文字",
-                                "value":"页脚说明文字：页脚空空如也~",
-                                "type":"text",
-                                "placeholder":"添加页脚话语",
-                                "tips":"添加后将在首页页脚处显示",
-                                "rule":{
-                                    "require":true
-                                    }                 
-                                }
-                            },
-                            "rule":{
-                                "require":true
-                            }
+                "title":"页脚说明文字",
+                "display":"1",
+                "vars":{
+                    "footer":{
+                    "title":"页脚说明文字",
+                    "value":"页脚说明文字：页脚空空如也~",
+                    "type":"text",
+                    "placeholder":"添加页脚话语",
+                    "tips":"添加后将在首页页脚处显示",
+                    "rule":{
+                        "require":true
+                        }                 
+                    }
+                },
+                "rule":{
+                    "require":true
+                }
                             
                         }             
         }
