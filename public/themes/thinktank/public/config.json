@@ -6,16 +6,35 @@
     "order": 0.0,
     "more": {
         "vars": {
-            "var1": {
-                "title": "var1",
-                "value": "var1",
-                "type": "select",
-                "value": 1,
-                "options": {
-                    "1": "开启",
-                    "0": "关闭"
+            "about": {
+                "title": "关于",
+                "value": [],
+                "type": "array",
+                "item":{
+                    "title": {
+                            "title": "页面名",
+                            "value": "",
+                            "type": "text",
+                            "tip": "填写首页展示名",
+                            "rule": {
+                                "require": true
+                            }
+                        },
+                    "id": {
+                        "title": "选择页面",
+                        "value": "",
+                        "type": "text",
+                        "tip": "请选择页面",
+                         "dataSource":{
+                            "api":"portal/Page/index",
+                            "multi" :false  
+                            }, 
+                        "rule": {
+                            "require": true
+                            }
+                        }
                 },
-                "tip": ""
+                "tip": "进入添加页脚的关于页面"
             }
         },
         "widgets":{
@@ -140,27 +159,7 @@
                             }
                         }                        
                     }         
-            },
-            "about":{
-                "title":"关于",
-                "display":"1",
-                "value":"",
-                "vars":{
-                    "nav_value":{
-                        "title":"关于",
-                        "tip":"请选择要展示的页面",
-                        "value":"",
-                        "type":"text",
-                        "dataSource":{
-                            "api":"portal/Page/index",
-                            "multi" :true  
-                            },                        
-                        "rules":{
-                            "require":true
-                            }
-                        }                        
-                    }                         
-            }                          
+            }                         
         }
     }
 }
