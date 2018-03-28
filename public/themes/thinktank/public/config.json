@@ -147,15 +147,14 @@
                 "value":"",
                 "vars":{
                     "nav_value":{
-                        "title":"首页导航设置",
-                        "tip":"",
-                        "value":"1",
+                        "title":"关于",
+                        "tip":"请选择要展示的页面",
+                        "value":"",
                         "type":"text",
-                        "placeholder":"",
                         "dataSource":{
-                            "api":"admin/Nav/index",
-                            "multi" :false  
-                            },
+                            "api":"portal/Page/index",
+                            "multi" :true  
+                            },                        
                         "rules":{
                             "require":true
                             }
