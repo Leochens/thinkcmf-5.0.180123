@@ -1,5 +1,5 @@
 <php>
-  //真是不容易啊
+
   //心得：
   //自己写一个分类菜单的api函数 作为一个数据源 这个函数返回菜单的所有字段
   //在index.json文件中加入一个变量，注意是变量不是组件widgets 会出bug
@@ -16,7 +16,7 @@
     <div class="title-wrap">
         <h3 class="section-title">热点</h3>
         <div class="tabs tab-post__tabs"> 
-            <ul class="tabs__list">
+            <ul class="tabs__list"> 
                 <volist name="$theme_vars.cate_hot" id='vo'>
                 <li class="tabs__item">
                      <a href="#tab-{$vo.select}" target="" class="tabs__trigger">{$vo.title}</a>

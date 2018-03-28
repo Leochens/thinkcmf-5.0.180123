@@ -19,19 +19,80 @@
             }
         },
         "widgets":{
+
              "footer_des":{
                 "title":"页脚说明文字",
                 "display":"1",
                 "vars":{
                     "footer":{
-                    "title":"页脚说明文字",
-                    "value":"页脚说明文字：页脚空空如也~",
-                    "type":"text",
-                    "placeholder":"添加页脚话语",
-                    "tips":"添加后将在首页页脚处显示",
-                    "rule":{
-                        "require":true
-                        }                 
+                        "title":"页脚说明文字",
+                        "value":"页脚说明文字：页脚空空如也~",
+                        "type":"text",
+                        "placeholder":"添加页脚话语",
+                        "tips":"添加后将在首页页脚处显示",
+                        "rule":{
+                            "require":true
+                            }                 
+                    },
+                    "extend":{
+                        "title":"页脚的友情链接",
+                        "value":"1",
+                        "type":"array",
+                        "preloader":"请填写友情链接",
+                        "tip":"请填写友情链接",
+                        "item":{
+                            "title": {
+                                    "title": "标题",
+                                    "value": "",
+                                    "type": "text",
+                                    "tip": "填写链接名",
+                                    "rule": {
+                                        "require": true
+                                    }
+                                },
+                            "url": {
+                                "title": "链接",
+                                "value": "http://",
+                                "type": "text",
+                                "tip": "填写友情链接 带http://",
+                                "rule": {
+                                    "require": true
+                                    }
+                                }
+                        },
+                        "rule":{
+                            "require":true
+                        }
+                    },
+                    "else":{
+                        "title":"页脚的最底部导航",
+                        "value":[],
+                        "type":"array",
+                        "preloader":"请填写导航",
+                        "tip":"请填写导航",
+                        "item":{
+                            "title": {
+                                    "title": "标题",
+                                    "value": "",
+                                    "type": "text",
+                                    "tip": "填写链接名",
+                                    "rule": {
+                                        "require": true
+                                    }
+                                },
+                            "url": {
+                                "title": "链接",
+                                "value": "http://",
+                                "type": "text",
+                                "tip": "填写导航链接 带http://",
+                                "rule": {
+                                    "require": true
+                                    }
+                                }
+                        },
+                        "rule":{
+                            "require":true
+                        }
                     }
                 },
                 "rule":{
@@ -79,7 +140,28 @@
                             }
                         }                        
                     }         
-            }                             
+            },
+            "about":{
+                "title":"关于",
+                "display":"1",
+                "value":"",
+                "vars":{
+                    "nav_value":{
+                        "title":"首页导航设置",
+                        "tip":"",
+                        "value":"1",
+                        "type":"text",
+                        "placeholder":"",
+                        "dataSource":{
+                            "api":"admin/Nav/index",
+                            "multi" :false  
+                            },
+                        "rules":{
+                            "require":true
+                            }
+                        }                        
+                    }                         
+            }                          
         }
     }
 }
