@@ -66,7 +66,7 @@
                 <h4 class="widget-title">关于</h4>
                 <ul>
                   <volist id='vo' name='$theme_vars.about' >
-                  <li><a href="{:url('portal/Page/index',array('id'=>$vo.id))}">{$vo.title}</a></li>
+                  <li><a href="{:url('portal/Page/index',array('id'=>$vo.id))}">{$vo.title|default="请到后台添加页面"}</a></li>
                   </volist>
                 </ul>
               </div>
