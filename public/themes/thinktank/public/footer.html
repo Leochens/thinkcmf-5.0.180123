@@ -62,14 +62,12 @@
             </div>            
 
             <div class="col-lg-3 col-md-6">
-              <div class="widget widget_nav_menu">
+              <div class="widget widget_nav_menu"> 
                 <h4 class="widget-title">关于</h4>
                 <ul>
-                  
-                  <li><a href="#">关于智库</a></li>
-                  <li><a href="#">联系我们</a></li>
-                  <li><a href="#">分类查询</a></li>
-                  <li><a href="#">其他智库</a></li>
+                  <volist id='vo' name='$theme_vars.about' >
+                  <li><a href="{:url('portal/Page/index',array('id'=>$vo.id))}">{$vo.title}</a></li>
+                  </volist>
                 </ul>
               </div>
             </div>            
