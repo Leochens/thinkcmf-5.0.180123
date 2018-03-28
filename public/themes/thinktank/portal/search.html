@@ -6,27 +6,52 @@
         <title>搜索 {$theme_vars.varName1|default=''} </title>
         <meta name="keywords" content="" />
         <meta name="description" content="">
-        
+        <include file='public@head_srcs'>
         <hook name="before_head_end"/>
+        
+        <style type="text/css">
+            .box{
+                background-color: #fff;
+                min-height: 400px;
+            }
+            .list-boxes{
+                background-color: #eee;
+            }
+            .k_a{
+                color: orange;
+            }
+        </style>
     </head>
-<body class="">
+<body style="background-color: white">
 
-<div class="container tc-main">
-    <div class="row">
-        <div class="col-md-9">
+
+    <main class="main oh" id="main">
+    <!--页面预加载-->
+    <include file='public@preloader' />  
+    <!--页头-->
+    <include file='public@header' /> 
+    <div  class="box col-lg-10 offset-1" >
             <div class="main-title">
-                <h3>'{$keyword}' 搜索结果 </h3>
+                <h3>'{$keyword}' | 搜索结果 </h3>
             </div>
             <php>
                 $where=[
                 'post.create_time'=>['egt',0],
                 'post.post_title'=>['like',"%$keyword%"]
-                ];
-            </php>
-
+                ];</php>
+            <ul>
             <portal:articles item="vo" where="$where" order="post.create_time DESC" page="10">
+            <li>
+                <h2><a class="k_a" href="{:cmf_url('portal/Article/index',array('id'=>$vo['id']))}">{$vo.post_title}</a></h2>            
+                <p>{$vo.post_excerpt}</p>
+            </li>
+            </portal:articles>
+            </ul>
 
-                <div class="list-boxes">
+
+           <!--  
+            <portal:articles item="vo" where="$where" order="post.create_time DESC" page="10">
+                <div class="list-boxes col-md-10 col-lg-offset-1 ">
                     <h2><a href="{:cmf_url('portal/Article/index',array('id'=>$vo['id']))}">{$vo.post_title}</a>
                     </h2>
                     <p>{$vo.post_excerpt}</p>
@@ -48,16 +73,29 @@
             </portal:articles>
             <div class="pagination">
                 <page/>
-            </div>
+            </div> -->
 
-        </div>
-        
+        </div>   
+
+
+    <include file='public@footer' />
+
+    <div id="back-to-top">
+      <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
     </div>
+  </main> <!-- end main-wrapper -->
 
-    <include file="public@footer"/>
-</div>
+  
+  <!-- jQuery Scripts  包含必要js文件-->
+<include file='public@js_srcs' />
+<!--this-->
+
+
 
 
 <hook name="before_body_end"/>
 </body>
 </html>
+
+
+
