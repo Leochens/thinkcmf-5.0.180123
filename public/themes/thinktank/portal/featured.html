@@ -52,7 +52,7 @@
 <portal:articles limit="2" order="post.published_time DESC"
                  categoryIds="$theme_widgets.feature_set.vars.Small">          
           <article class="entry featured-posts-grid__entry">
-            <div class="thumb-bg-holder" style="background-image: url({$vo.more.thumbnail});">
+            <div class="thumb-bg-holder" style='background-image: url("{:cmf_get_image_url($vo.more.thumbnail)}");'>
               <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="thumb-url"></a>
               <div class="bottom-gradient"></div>
             </div>

@@ -159,7 +159,28 @@
                             }
                         }                        
                     }         
-            }                         
+            },
+            "theme" : {
+                "title":"整体配色",
+                "value":"#1b1c1f",
+                "type":"text",
+                "tip":"输入颜色代码(16进制)",
+                "vars":{
+                    "main":{
+                        "title":"页头页脚主色",
+                        "value":"#1b1c1f",
+                        "type":"text",
+                        "tip":""
+
+                    },
+                    "else":{
+                        "title":"左侧侧导航分级菜单",
+                        "value":"#1b1c1f",
+                        "type":"text",
+                        "tip":""
+                    }
+                }
+            }                       
         }
     }
 }
