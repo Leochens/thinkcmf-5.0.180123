@@ -163,13 +163,18 @@
                         "value":"#1b1c1f",
                         "type":"text",
                         "tip":""
-
                     },
                     "else":{
                         "title":"左侧侧导航分级菜单",
                         "value":"#1b1c1f",
                         "type":"text",
                         "tip":"选中一个父级菜单后显示的效果"
+                    },
+                    "embellish":{
+                        "title":"设置点缀色",
+                        "value":"#fc6d41",
+                        "type":"text",
+                        "tip":"点缀色：文本高亮，按钮等配色"                        
                     }
                 }
             }                         

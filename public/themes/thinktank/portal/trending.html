@@ -4,7 +4,7 @@
 
     <div class="trending-now">
       <div class="container relative">
-        <span class="trending-now__label">看点</span>       
+        <span style="background-color: {$theme_widgets.theme.vars.embellish}" class="trending-now__label">看点</span>       
         <ul class="newsticker">
           <portal:articles id='vo' limit="10" order="post.published_time DESC"
                  categoryIds="$theme_widgets.trending_set.vars.trending">
