@@ -1,88 +1,87 @@
    <taglib name="app\portal\taglib\Portal"/>
 
     <!-- Featured Posts Grid -->      
-    <section class="featured-posts-grid bg-dark">
-      <div class="container clearfix">
+    <section class="big  ">
+      <div class="row ml">
         <!-- Large post slider -->
         <!--大的轮播图-->
-        <div class="featured-posts-grid__item featured-posts-grid__item--lg">
-          <div id="owl-hero-grid" class="owl-carousel owl-theme owl-carousel--dots-inside">
-            <!--首页轮播大图-->
-          
+        <div class="col-lg-6" >
+          <div class="featured-posts-grid__item featured-posts-grid__item">
+            <div id="owl-hero-grid" class="owl-carousel owl-theme owl-carousel--dots-inside">
+              <!--首页轮播大图-->
+            
 
-          <portal:articles limit="5" order="post.published_time DESC"
-                 categoryIds="$theme_widgets.feature_set.vars.Big">            
-            <article class="entry featured-posts-grid__entry">
-             
-              <!--判断是否存在缩略图-->
-                <if condition="empty($vo.more.thumbnail)">
+            <portal:articles limit="5" order="post.published_time DESC"
+                   categoryIds="$theme_widgets.feature_set.vars.Big">            
+              <article class="entry featured-posts-grid__entry">
+               
+                <!--判断是否存在缩略图-->
+                  <if condition="empty($vo.more.thumbnail)">
 
-                   <div class="thumb-bg-holder owl-lazy" data-src="__TMPL__/public/assets/images/default_tupian4.png">
-                      <img class="d-none" src="__TMPL__/public/assets/images/default_tupian4.png"
-                            alt="{$vo.post_title}"/>
-                    </div>  
-                      <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="thumb-url"></a>
-                      <div class="bottom-gradient"></div>                   
-                    <else/>
+                     <div class="thumb-bg-holder owl-lazy" data-src="__TMPL__/public/assets/images/default_tupian4.png">
+                        <img class="d-none" src="__TMPL__/public/assets/images/default_tupian4.png"
+                              alt="{$vo.post_title}"/>
+                      </div>  
+                        <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="thumb-url"></a>
+                        <div class="bottom-gradient"></div>                   
+                      <else/>
 
-                    <div class="thumb-bg-holder owl-lazy" data-src="{:cmf_get_image_url($vo.more.thumbnail)}"> 
-                      <img class="d-none" src="{:cmf_get_image_url($vo.more.thumbnail)}"
-                            alt="{$vo.post_title}"/>
-                    </div>
+                      <div class="thumb-bg-holder owl-lazy" data-src="{:cmf_get_image_url($vo.more.thumbnail)}"> 
+                        <img class="d-none" src="{:cmf_get_image_url($vo.more.thumbnail)}"
+                              alt="{$vo.post_title}"/>
+                      </div>
 
-                      <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="thumb-url"></a>
-                      <div class="bottom-gradient"></div>    
-                </if>
-                
-              <div class="thumb-text-holder">
-                <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="entry__meta-category entry__meta-category-color entry__meta-category-color--salad">{$vo.post_keywords}</a>   
-                <h2 class="thumb-entry-title">
-                  <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
-                </h2>
-              </div>
-            </article>
+                        <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="thumb-url"></a>
+                        <div class="bottom-gradient"></div>    
+                  </if>
+                  
+                <div class="thumb-text-holder">
+                  <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="entry__meta-category entry__meta-category-color entry__meta-category-color--salad">{$vo.post_keywords}</a>   
+                  <h2 class="thumb-entry-title">
+                    <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
+                  </h2>
+                </div>
+              </article>
             </portal:articles>           
-          </div> <!-- end owl slider -->
-        </div> 
-        <!-- end large post slider -->
-        
-     
+            </div> <!-- end owl slider -->
+          </div> 
+          </div>
+          <!-- end large post slider -->
        
-        <div class="featured-posts-grid__item featured-posts-grid__item--sm">        
-<portal:articles limit="2" order="post.published_time DESC"
-                 categoryIds="$theme_widgets.feature_set.vars.Small">          
-          <article class="entry featured-posts-grid__entry">
-            <div class="thumb-bg-holder" style='background-image: url("{:cmf_get_image_url($vo.more.thumbnail)}");'>
-              <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}" class="thumb-url"></a>
-              <div class="bottom-gradient"></div>
-            </div>
-
-            <div class="thumb-text-holder">  
-              <h2 class="thumb-entry-title thumb-entry-title--sm">
-                <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
-              </h2>
-              <ul class="entry__meta">
-                <li class="entry__meta-author">
-                  <i class="ui-author"></i>
-                  <a href="#">{$vo.post_source|default="未知来源"}</a>
-                </li>
-                <li class="entry__meta-date">
-                  <i class="ui-date"></i>
-                  {$vo.create_time|date='Y-m-d',###}
-                </li>
-                <li class="entry__meta-comments">
-                  <i class="ui-comments"></i>
-                  <a href="#">{$vo.comment_count}</a>
-                </li>               
-              </ul>
-            </div>
-          </article>
-      </portal:articles>
-
-        </div>      
-  
-       
+        <div class="news col-lg-4">
+        <h2>新闻动态</h2>
+          <ul class="list">
+            <portal:articles id='vo' limit="10" order="post.published_time DESC"
+                   categoryIds="$theme_widgets.trending_set.vars.trending">
+            <li class="newsticker__item"><a class="newsticker__item-url" href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a></li> 
+            </portal:articles>
+          </ul>
+        </div>
+    
+         
        
       
-      </div>
+    </div>
     </section> <!-- end featured posts grid -->
+
+    <style>
+    .blg{
+        height: 400px;
+        padding: 0;
+    }
+    .news>.list{
+      font-style: 14px;
+      font-weight: 400;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    .news > .list li{
+      border-bottom: 1px;
+      border-bottom-style: dashed;
+      line-height: 24px;
+      padding: 6px 0;
+    }
+    .ml{
+      margin-left: 8.33333333%;
+    }
+    </style>
