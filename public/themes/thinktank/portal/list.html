@@ -23,6 +23,13 @@
             background-color:{$theme_widgets.theme.vars.embellish};
 
         }
+    .res_list_item{
+       font-weight:150;
+       padding: 10px;
+    }
+    .res_list_item:hover{
+        color: blue;
+    }
     </style>
 </head>
 
@@ -36,7 +43,7 @@
 
     <div class="container">
         <php>$demo_time=2;</php>
-        <h2>{$category.name}</h2>
+        <h3>{$category.name}</h3>
         <div class="row">
             <div class="col-md-9">
                 <div class="">
@@ -55,20 +62,17 @@
                                      categoryIds="$category.id"
                                      returnVarName="articles_data">
                         <div class="list-boxes">
-                            <h2><a href="{:cmf_url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$category['id']))}">{$vo.post_title}</a>
-                            </h2>
-                            <p>{$vo.post_excerpt}</p>
-                            <div> 
-                                <div class="pull-left">
-                                    <div class="list-actions">
-                                        <a href="javascript:;"><i class="ui-date"></i><span> {$vo.published_time|date='Y-m-d',###}</span></a>
+
+                            <ul>
+                                <li class="res_list_item" >
+                                    <h5 ><a href="{:cmf_url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$category['id']))}">{$vo.post_title}</a></h5> 
+                                    <p>{$vo.post_excerpt}</p>
+                                    <a href="javascript:;"><i class="ui-date"></i><span> {$vo.published_time|date='Y-m-d',###}</span></a>
                                         <a href="#"
                                            class="js-count-btn"><i class="ui-author"></i><span class="count">{$vo.post_source}</span></a>
-                                    </div>
-                                </div>
-                                <a class="embellish-bgc btn btn-warning btn-sm pull-right"
-                                   href="{:cmf_url('portal/Article/index',array('id'=>$vo['id'],'cid'=>$category['id']))}">查看更多</a>
-                            </div>
+                                </li>
+                            </ul>
+                            
                         </div>
                     </portal:articles>
                 </div>
@@ -76,7 +80,7 @@
                     <page/>
                 </ul>
             </div>
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
 
                 <widget name="hottest_articles">
                     <div class="tc-box">
@@ -134,7 +138,7 @@
                         </div>
                     </div>
                 </widget>
-            </div>
+            </div> -->
         </div>
     </div>   
 
