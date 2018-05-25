@@ -49,11 +49,11 @@
           <!-- end large post slider -->
        
         <div class="news col-lg-6 col-md-12 col-xs-12">
-        <h2>新闻动态</h2>
+        <h3>新闻动态</h3>
           <ul class="list">
             <portal:articles id='vo' limit="10" order="post.published_time DESC"
-                   categoryIds="$theme_widgets.trending_set.vars.trending">
-            <li class="newsticker__item"><a class="newsticker__item-url" href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a></li> 
+                   categoryIds="$theme_widgets.xwdt_set.vars.select">
+            <li class="newsticker__item"><a class="newsticker__item-url" href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a><span style="float: right;color: #949494;    white-space: nowrap;">{$vo.create_time|date='m/d',###}</span></li> 
             </portal:articles>
           </ul>
         </div>
