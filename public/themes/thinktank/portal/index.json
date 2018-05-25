@@ -99,17 +99,17 @@
 
                 }
             },            
-            "latest_set":{
-                        "title":"最新栏目展示",
+            "tzgg_set":{
+                        "title":"通知公告",
                         "value":"",
                         "display":"1",
                         "vars": {
                            
                             "select": {
-                            "title": "最新栏目展示",
+                            "title": "通知公告",
                             "value": "1",
                             "type": "text",                          
-                            "placeholder":"选择最新菜单",
+                            "placeholder":"选择通知公告菜单",
                             "tip":"选择后将在首页进行展示",  
                             "dataSource": {
                                 "api": "portal/category/index",
@@ -121,17 +121,61 @@
                            }                            
                         } 
             },
-            "more_set": {
-                        "title":"更多展示菜单",
+            "xwdt_set":{
+                        "title":"新闻动态",
                         "value":"",
                         "display":"1",
                         "vars": {
                            
                             "select": {
-                            "title": "更多展示菜单",
+                            "title": "新闻动态",
                             "value": "1",
                             "type": "text",                          
-                            "placeholder":"选择菜单",
+                            "placeholder":"选择新闻动态菜单",
+                            "tip":"选择后将在首页进行展示",  
+                            "dataSource": {
+                                "api": "portal/category/index",
+                                "multi": false
+                            },                         
+                            "rule": {
+                                "require": true
+                                }                             
+                           }                            
+                        } 
+            },
+            "llrd_set":{
+                        "title":"理论热点",
+                        "value":"",
+                        "display":"1",
+                        "vars": {
+                           
+                            "select": {
+                            "title": "理论热点",
+                            "value": "1",
+                            "type": "text",                          
+                            "placeholder":"选择理论热点菜单",
+                            "tip":"选择后将在首页进行展示",  
+                            "dataSource": {
+                                "api": "portal/category/index",
+                                "multi": false
+                            },                         
+                            "rule": {
+                                "require": true
+                                }                             
+                           }                            
+                        } 
+            },
+            "xszc_set": {
+                        "title":"形式政策",
+                        "value":"",
+                        "display":"1",
+                        "vars": {
+                           
+                            "select": {
+                            "title": "形式政策",
+                            "value": "1",
+                            "type": "text",                          
+                            "placeholder":"选择形式政策菜单",
                             "tip":"选择后将在首页进行展示",  
                             "dataSource": {
                                 "api": "portal/category/index",
