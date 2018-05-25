@@ -1,28 +1,20 @@
-<section class="row justify-content-md-center">
 
-<div class="tzgg col-5">
+<section class="container col col-lg-2">
+<div class="row">
+	<volist name="$theme_vars.cate_hot" id='cate_item'>
+	<div class=" tzgg col-6">
 
-  <h3>通知公告</h3>
-  <ul class="col-11">
-   <volist name="$theme_vars.cate_hot" id='cate_item'>
-  <portal:articles id='vo' limit="4" order="post.published_time DESC" categoryIds="$cate_item.select">  
-                  
-  	<li><a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a><span>{$vo.create_time|date='Y-m-d',###}</span></li>
-  </portal:articles>
-  	</volist>
-  	
-  </ul>
-  </div>
-  <div class="tzgg col-5">
-  <h3>通知公告</h3>
-  <ul class="col-11">
-  	<li><a href="">【经济日报】看！珠海揽才诚意足【经济日报】看！珠海揽才诚意足</a><span>05/15</span></li>
-  	<li><a href="">【经济日报】看！珠海揽才诚意足【经济日报】看！珠海揽才诚意足</a><span>05/15</span></li>
-  	<li><a href="">【经济日报】看！珠海揽才诚意足【经济日报】看！珠海揽才诚意足</a><span>05/15</span></li>
-  	<li><a href="">【经济日报】看！珠海揽才诚意足【经济日报】看！珠海揽才诚意足</a><span>05/15</span></li>
-  	<li><a href="">【经济日报】看！珠海揽才诚意足【经济日报】看！珠海揽才诚意足</a><span>05/15</span></li>
-  </ul>
-  </div>
+		  <h3>通知公告</h3>
+		  <ul class="col-11">
+			  <portal:articles id='vo' limit="4" order="post.published_time DESC" categoryIds="$cate_item.select">  
+			  	<li>
+			  	<a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a><span>{$vo.create_time|date='Y-m-d',###}</span>
+			  	</li>
+			  </portal:articles>
+	  		</ul>
+	 </div>
+	</volist>
+</div>
 </section>
 
 
