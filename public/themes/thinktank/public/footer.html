@@ -1,5 +1,5 @@
 <!-- Footer -->
-    <footer class="footer footer--dark">
+   <!--  <footer class="footer footer--dark">
       <div class="container">
         <div class="footer__widgets">
           <div class="row">
@@ -76,7 +76,7 @@
         </div>    
       </div> <!-- end container -->
 
-      <div class="footer__bottom">
+      <!-- <div class="footer__bottom">
         <div class="container">
           <div class="row">
             <div class="col-lg-7 order-lg-2 text-right text-md-center">
@@ -95,6 +95,31 @@
             </div>            
           </div>
           
-        </div>
-      </div> <!-- end bottom footer -->
-    </footer> <!-- end footer -->
+        </div> 
+      </div>--> <!-- end bottom footer -->
+   <!--  </footer> --> <!-- end footer -->
+
+
+
+    <footer class="footer footer--dark">
+    
+      <div class="container">
+          <div class="row">
+            <div class="col-lg-7 order-lg-2 text-right text-md-center">
+              <div class="widget widget_nav_menu">
+                <ul>
+                   <volist length='5' name='$theme_widgets.footer_des.vars.else' id='vo'>
+                  <li><a href="{$vo.url}">{$vo.title|default="页脚项"}</a></li>
+                  </volist>
+                </ul>
+              </div>              
+            </div>
+            <div class="col-lg-5 order-lg-1 text-md-center">
+              <span class="copyright">
+               {$site_info.site_icp}  
+              </span>
+            </div>            
+          </div>
+        </div> 
+ 
+    </footer>
