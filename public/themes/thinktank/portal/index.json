@@ -187,6 +187,51 @@
                            }                            
                         } 
             },
+            "yjcg_set": {
+                        "title":"研究成果",
+                        "value":"",
+                        "display":"1",
+                        "vars": {
+                           
+                            "select": {
+                            "title": "研究成果",
+                            "value": "1",
+                            "type": "text",                          
+                            "placeholder":"选择研究成果菜单",
+                            "tip":"选择后将在首页进行展示",  
+                            "dataSource": {
+                                "api": "portal/category/index",
+                                "multi": false
+                            },                         
+                            "rule": {
+                                "require": true
+                                }                             
+                           }                            
+                        } 
+            },
+            "sjpt_set": {
+                        "title":"数据平台",
+                        "value":"",
+                        "display":"1",
+                        "vars": {
+                           
+                            "select": {
+                            "title": "数据平台",
+                            "value": "1",
+                            "type": "text",                          
+                            "placeholder":"选择数据平台菜单",
+                            "tip":"选择后将在首页进行展示",  
+                            "dataSource": {
+                                "api": "portal/category/index",
+                                "multi": false
+                            },                         
+                            "rule": {
+                                "require": true
+                                }                             
+                           }                            
+                        } 
+            },
+            
             "focus_set": {
                         "title":"右侧边栏聚焦",
                         "value":"",
