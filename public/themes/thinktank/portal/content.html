@@ -1,96 +1,74 @@
-<include  file='portal@tzgg'>
- 
- <div class="main-container container mt-40" id="main-container">         
-  
-      <!-- Content -->
-      <div class="row">
+<div class="content col-lg-10 offset-lg-1">
+    <include file='portal@featured' />
+	<include  file='portal@tzgg' />
 
-        <!-- Posts -->
-        <div class="col-lg-8 blog__content mb-30">
-          
-          <!-- Hot News -->
-          <include  file='portal@hotNews'>
-          <include  file='portal@latestNews'>
-          <include  file='portal@test'>
-          <!-- Latest News -->
-         
- 
-          <!-- Ad Banner 728 
-          <div class="text-center pb-40">
-            <a href="#">
-              <img src="img/blog/placeholder_leaderboard.jpg" alt="">
-            </a>
-          </div>-->
+	<div class="specialcover col-lg-12 col-md-12 col-xs-12">
+	  <img src="http://ygafz.sysu.edu.cn/UploadFiles/jpg/201609/20160926095817928_s1200.jpg" alt="">
+	</div>
+	
 
-          <!-- Editor's Picks -->
+	<!-- 数据平台研究成果 -->
+	<section class="container">
+	<div class="row">
+		<div class="tzgg col-lg-8 col-md-12 col-xs-12">
+			  <h3>数据平台</h3>
+			 	<ul class="row justify-content-around">
+			 		<li class="db col-lg-4 col-md-6 col-xs-12"><a  href="">智库</a></li>
+			 		<li class="db col-lg-4 col-md-6 col-xs-12"><a  href="">智库</a></li>
+			 		
+			 	</ul>
+		 </div>
+		 <div class="tzgg col-lg-4 col-md-12 col-xs-12">
+			  <h3>研究成果</h3>
+			 	<ul class="row">
+			 		<li class="col-lg-12"><a  href="">智库</a></li>
+			 		<li class="col-lg-12"><a  href="">智库</a></li>
+			 	</ul>
+		 </div>
+	</div>
+	</section>
+	
+	
+	<section class="container">
+	<div class="row">
+		<div class="tzgg col-lg-8 col-md-12 col-xs-12">
+			  <h3>友情链接</h3>
+			 	<ul class="row justify-content-around">
+			 		<li class="db col-lg-4 col-md-6 col-xs-12"><a  href="">智库</a></li>
+			 		<li class="db col-lg-4 col-md-6 col-xs-12"><a  href="">智库</a></li>
+			 		
+			 	</ul>
+		 </div>
+		 <div class="tzgg col-lg-4 col-md-12 col-xs-12">
+			  <h3>形式政策</h3>
+			 	<ul class="row">
+			 		<li class="col-lg-12"><a  href="">智库</a></li>
+			 		<li class="col-lg-12"><a  href="">智库</a></li>
+			 	</ul>
+		 </div>
+	</div>
+	</section>
+</div>	
 
-        {//include  file='index/index_component/Normals'}
 
-          <!-- end editors picks -->
 
-          <!-- Posts from 菜单 -->
-        {//include  file='index/index_component/categories'}
 
-        
-
-          <!-- Carousel posts -->
-          <section class="section mb-20">
-            <div class="title-wrap">
-              <h3 class="section-title section-title--sm">更多</h3>
-              <div class="carousel-nav">
-                <button class="carousel-nav__btn carousel-nav__btn--prev" aria-label="previous slide">
-                  <i class="ui-arrow-left"></i>
-                </button>
-                <button class="carousel-nav__btn carousel-nav__btn--next" aria-label="next slide">
-                  <i class="ui-arrow-right"></i>
-                </button>
-              </div>
-            </div>
-
-            <!-- Slider -->
-            <div id="owl-posts" class="owl-carousel owl-theme">
-
-            <portal:articles id='vo'  order="post.published_time DESC"
-                 categoryIds="$theme_widgets.more_set.vars.select">
-              <article class="entry">
-                <div class="entry__img-holder">
-                  <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">
-                    <div class="thumb-container thumb-75">
-                      <img data-src="{:cmf_get_image_url($vo.more.thumbnail)}" class="entry__img owl-lazy" alt="" />
-                    </div>
-                  </a>
-                </div>
-
-                <div class="entry__body">
-                  <div class="entry__header">
-                    <h2 class="entry__title entry__title--sm">
-                      <a href="{:url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
-                    </h2>
-                    <ul class="entry__meta">
-                      <li class="entry__meta-date">
-                        <i class="ui-date">{$vo.create_time|date='Y-m-d',###}</i>
-                        
-                      </li>
-                      <li class="entry__meta-comments">
-                        <i class="ui-comments"></i>
-                        <a href="#">{$vo.comment_count}</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
-            </portal:articles>
-            </div> <!-- end slider -->
-
-          </section>
-
-        </div> <!-- end posts -->
-
-        <!-- Sidebar -->
-        
-        <include  file='portal@right_sidebar'>
-        
-  
-      </div> <!-- end content -->
-    </div> <!-- end main container -->
-    
+<style>
+	.db{
+		
+	}
+	.db a{
+	display: block;
+    padding: 26px 12px;
+    background: #4c87d3;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;   
+    box-shadow: 0 2px 3px #ccc;
+    border:2px solid white;
+	}
+	.specialcover{
+		margin: 10px;
+	}
+</style>

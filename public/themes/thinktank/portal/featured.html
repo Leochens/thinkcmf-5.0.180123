@@ -1,11 +1,11 @@
    <taglib name="app\portal\taglib\Portal"/>
 
     <!-- Featured Posts Grid -->      
-    <section class="big  ">
-      <div class="row ml">
+    <section class="big container ">
+      <div class="row">
         <!-- Large post slider -->
         <!--大的轮播图-->
-        <div class="col-lg-6" >
+        <div class="col-lg-6 col-md-12 col-xs-12" >
           <div class="featured-posts-grid__item featured-posts-grid__item">
             <div id="owl-hero-grid" class="owl-carousel owl-theme owl-carousel--dots-inside">
               <!--首页轮播大图-->
@@ -48,7 +48,7 @@
           </div>
           <!-- end large post slider -->
        
-        <div class="news col-lg-4">
+        <div class="news col-lg-6 col-md-12 col-xs-12">
         <h2>新闻动态</h2>
           <ul class="list">
             <portal:articles id='vo' limit="10" order="post.published_time DESC"
