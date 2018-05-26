@@ -7,7 +7,7 @@
     <meta name="keywords" content="{$category.seo_keywords},{$site_info.site_seo_keywords|default=''}"/>
     <meta name="description" content="{$category.seo_description},{$site_info.site_seo_description|default=''}">
     <hook name="before_head_end"/>
-    <include file='public@head_srcs'>
+    <include file='public@head_srcs'> 
 
     <style type="text/css">
         .list-boxes>h2>a:hover{
@@ -16,7 +16,7 @@
         .list-boxes{
             margin: 10px;
         }
-        .embellish-text{
+        .embellish-text{ 
             color:{$theme_widgets.theme.vars.embellish};
         }
         .embellish-bgc:hover{
