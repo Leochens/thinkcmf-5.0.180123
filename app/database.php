@@ -15,4 +15,4 @@ if(file_exists(CMF_ROOT."data/conf/database.php")){
     $database=[];
 }
 
-return $database;
+return $database; 
