@@ -55,7 +55,7 @@
                     },
                     "extend_zfdw":{
                         "title":"友情链接———政府单位",
-                        "value":"",
+                        "value":[],
                         "type":"array",
                         "preloader":"请填写友情链接",
                         "tip":"请填写友情链接",
@@ -82,7 +82,7 @@
                     },
                     "extend_xndw":{
                         "title":"友情链接———校内单位",
-                        "value":"",
+                        "value":[],
                         "type":"array",
                         "preloader":"请填写友情链接",
                         "tip":"请填写友情链接",
@@ -109,7 +109,7 @@
                     },
                     "extend_zkjg":{
                         "title":"友情链接———智库机构",
-                        "value":"",
+                        "value":[],
                         "type":"array",
                         "preloader":"请填写友情链接",
                         "tip":"请填写友情链接",

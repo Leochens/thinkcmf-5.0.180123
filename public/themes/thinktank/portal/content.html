@@ -40,6 +40,16 @@
 					 <volist length='3' name='$theme_widgets.footer_des.vars.extend_zfdw' id='vo'>
 						<li class="link_item"><a href="{$vo.url}">{$vo.title}</a></li>
 					 </volist>
+
+					<select class="select" onchange="goto(this)">
+					<option value="javascript:void(0)" selected>更多...</option>
+					<volist  name='$theme_widgets.footer_des.vars.extend_zfdw' id='vo'>
+			
+						<option value="{$vo.url}">
+						{$vo.title}
+						</option>
+					 </volist>
+					</select>
 				</ul>
 
 			<ul class="link_ul col-lg-4 col-md-4 col-xs-12">
@@ -47,6 +57,15 @@
 					 <volist length='3' name='$theme_widgets.footer_des.vars.extend_xndw' id='vo'>
 						<li class="link_item"><a href="{$vo.url}">{$vo.title}</a></li>
 					 </volist>
+					 <select class="select" onchange="goto(this)">
+					<option value="javascript:void(0)" selected>更多...</option>
+					<volist  name='$theme_widgets.footer_des.vars.extend_xndw' id='vo'>
+			
+						<option value="{$vo.url}">
+						{$vo.title}
+						</option>
+					 </volist>
+					</select>
 			</ul>
 
 			<ul class="link_ul col-lg-4 col-md-4 col-xs-12">
@@ -54,6 +73,15 @@
 					 <volist length='3' name='$theme_widgets.footer_des.vars.extend_zkjg' id='vo'>
 						<li class="link_item"><a href="{$vo.url}">{$vo.title}</a></li>
 					 </volist>
+					 <select class="select" onchange="goto(this)">
+					<option value="javascript:void(0)" selected>更多...</option>
+					<volist  name='$theme_widgets.footer_des.vars.extend_zkjg' id='vo'>
+			
+						<option value="{$vo.url}">
+						{$vo.title}
+						</option>
+					 </volist>
+					</select>
 			</ul>
 
 				
@@ -92,4 +120,25 @@
 	.specialcover{
 		margin: 10px;
 	}
+	.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
+<script>
+	function goto(e)
+	{
+		window.location.href=e.value;
+			}
+</script>
