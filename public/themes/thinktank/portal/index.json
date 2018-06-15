@@ -5,40 +5,6 @@
     "order": 5.0,
     "more":{
         "vars": {
-            "cate_hot":{
-                "title": "热点菜单",
-                "value": "",
-                "type": "array",                          
-                "placeholder":"选择菜单",
-                "tip":"选择后将在首页进行展示",                           
-                "item": {
-                    "select":{
-                        "title": "菜单名id",
-                        "value": "",
-                        "type": "text",
-                        "tip": "这是一个测试",
-                        "rule": {
-                            "require": true
-                        },
-                        "dataSource":{
-                            "api":"portal/category/cate", 
-                            "multi":false
-                        }
-                    },
-                    "title": {
-                        "title": "菜单名",
-                        "value": "",
-                        "type": "text",
-                        "tip": "这是一个测试",
-                        "rule": {
-                            "require": true
-                        }
-                    }
-                },
-                "rule": {
-                    "require": false
-                    }                             
-            }
         },
         "widgets":{
             "trending_set":{
@@ -81,21 +47,7 @@
                         "rule": {
                             "require": true
                             }
-                        },
-                    "Small": {
-                        "title": "小侧图",
-                        "value": "1",
-                        "type": "text",
-                        "placeholder": "选择要展示的菜单",
-                        "tip": "设置后该分类下的文章将会在首页轮播大图旁的侧图位置播放",
-                        "dataSource": {
-                            "api": "portal/category/index",
-                            "multi": true
-                        },
-                        "rule": {
-                            "require": true
-                            }
-                        }                      
+                        }                 
 
                 }
             },            

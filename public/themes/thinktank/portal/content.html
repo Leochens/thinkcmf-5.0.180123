@@ -1,6 +1,6 @@
 <div class="content col-lg-10 offset-lg-1">
     <include file='portal@featured' />
-	<include  file='portal@tzgg' />
+	<include  file='portal@middle' />
 
 	<div class="container">
 		<div class=" specialcover col-lg-12 col-md-12 col-xs-12"></div>
@@ -36,23 +36,27 @@
 			  <h3>友情链接</h3>
 			<ul class="friendlinks row justify-content-center">
 				<ul class="link_ul col-lg-4 col-md-4 col-xs-12">
-					<h6>分组名</h6>
-					<li class="link_item"><a href="">友情链接</a></li>
-					<li class="link_item"><a href="">友情链接</a></li>
-					<li class="link_item"><a href="">友情链接</a></li>
+					<h6>政府单位</h6>
+					 <volist length='3' name='$theme_widgets.footer_des.vars.extend_zfdw' id='vo'>
+						<li class="link_item"><a href="{$vo.url}">{$vo.title}</a></li>
+					 </volist>
 				</ul>
-				<ul class="link_ul col-lg-4 col-md-4 col-xs-12">
-					<h6>分组名</h6>
-					<li class="link_item"><a href="">友情链接</a></li>
-					<li class="link_item"><a href="">友情链接</a></li>
-					<li class="link_item"><a href="">友情链接</a></li>
-				</ul>
-				<ul class="link_ul col-lg-4 col-md-4 col-xs-12">
-					<h6>分组名</h6>
-					<li class="link_item"><a href="">友情链接</a></li>
-					<li class="link_item"><a href="">友情链接</a></li>
-					<li class="link_item"><a href="">友情链接</a></li>
-				</ul>
+
+			<ul class="link_ul col-lg-4 col-md-4 col-xs-12">
+					<h6>校内单位</h6>
+					 <volist length='3' name='$theme_widgets.footer_des.vars.extend_xndw' id='vo'>
+						<li class="link_item"><a href="{$vo.url}">{$vo.title}</a></li>
+					 </volist>
+			</ul>
+
+			<ul class="link_ul col-lg-4 col-md-4 col-xs-12">
+					<h6>智库机构</h6>
+					 <volist length='3' name='$theme_widgets.footer_des.vars.extend_zkjg' id='vo'>
+						<li class="link_item"><a href="{$vo.url}">{$vo.title}</a></li>
+					 </volist>
+			</ul>
+
+				
 
 			</ul>
 		 </div>
