@@ -20,6 +20,15 @@
             .k_a{
                 color: orange;
             }
+        h1,h2,h3,h4,h5,h6{
+        font-weight: 100!important;
+       }
+       .pr{
+        float: right;
+    }
+     .t_item:hover{
+    color: red;
+}  
         </style>
     </head>
 <body style="background-color: white">
@@ -30,7 +39,8 @@
     <include file='public@preloader' />  
     <!--页头-->
     <include file='public@header' /> 
-    <div  class="box col-lg-10 offset-1" >
+    <br>
+    <div  class="box col-lg-8 offset-1" >
             <div class="main-title">
                 <h3>'{$keyword}' | 搜索结果 </h3>
             </div>
@@ -40,11 +50,18 @@
                 'post.post_title'=>['like',"%$keyword%"]
                 ];</php>
             <ul>
+            <br>
             <portal:articles item="vo" where="$where" order="post.create_time DESC" page="10">
             <li>
-                <h2><a class="k_a" href="{:cmf_url('portal/Article/index',array('id'=>$vo['id']))}">{$vo.post_title}</a></h2>            
-                <p>{$vo.post_excerpt}</p>
+               
+                 <h5><a class="t_item" href="{:cmf_url('portal/Article/index',array('id'=>$vo['id']))}">{$vo.post_title}</a>
+                                    <span class="pr">
+                                     <i class="ui-date"></i><span> {$vo.published_time|date='Y-m-d',###}</span>
+                                    <i class="ui-author"></i><span class="count">{$vo.post_source}</span></span></h5> 
+                                    
+                                    <p>{$vo.post_excerpt}</p>
             </li>
+
             </portal:articles>
             </ul>
 

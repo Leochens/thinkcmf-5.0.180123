@@ -4312,7 +4312,16 @@ dd {
   height: 100px;
     width: 100%;
 }
+.t_item{
+    }
+ .t_item:hover{
+    color: red;
+}   
+.pr{
+    float: right;
+}
 
-
-
+  h1,h2,h3,h4,h5,h6{
+    font-weight: 100!important;
+  }
 /*# sourceMappingURL=style.css.map */
