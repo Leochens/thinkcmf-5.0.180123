@@ -49,7 +49,7 @@
                 'post.create_time'=>['egt',0],
                 'post.post_title'=>['like',"%$keyword%"]
                 ];</php>
-            <ul>
+            <ol>
             <br>
             <portal:articles item="vo" where="$where" order="post.create_time DESC" page="10">
             <li>
@@ -63,7 +63,7 @@
             </li>
 
             </portal:articles>
-            </ul>
+            </ol>
 
 
            <!--  
