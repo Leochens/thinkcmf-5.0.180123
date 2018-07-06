@@ -222,8 +222,14 @@
                         "title":"页脚区域配色",
                         "value":"#265CA2",
                         "type":"text",
-                        "tip":"选中一个父级菜单后显示的效果"
+                        "tip":"页脚区域"
                     },
+                    "font":{
+                        "title":"全局字体",
+                        "value":"Microsoft YaHei",
+                        "type":"text",
+                        "tip":"网站全局的字体"
+                    },                    
                     "embellish":{
                         "title":"设置点缀色",
                         "value":"#fc6d41",

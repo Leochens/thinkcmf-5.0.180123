@@ -34,14 +34,14 @@
                 <navigation nav-id="$theme_widgets.nav_set.vars.nav_value" root="">
 
                   <navigationMenu root="li" class="nav__dropdown menu-item-level-{$level}">
-                    <a href="{$menu.href|default=''}" target="{$menu.target|default=''}">
+                    <a style="color: #fff" href="{$menu.href|default=''}" target="{$menu.target|default=''}">
                     {$menu.name|default=''}
                     </a>
                   </navigationMenu>  
 
                   <navigationFolder root="li" class="nav__dropdown" dropdown="ul"
                                     dropdown-class="nav__dropdown-menu">
-                    <a href="#" class="dropdown-toggle dropdown-toggle-{$level}" data-toggle="dropdown">
+                    <a href="#" style="color: #fff" class="dropdown-toggle dropdown-toggle-{$level}" data-toggle="dropdown">
                         {$menu.name|default=''}<span class="caret"></span>
                     </a>
                   </navigationFolder> 
