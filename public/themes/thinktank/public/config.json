@@ -206,21 +206,21 @@
                     }         
             },
             "theme" : {
-                "title":"整体配色",
-                "value":"#1b1c1f",
+                "title":"配色",
+                "value":"#265CA2",
                 "type":"text",
                 "display":"1",
                 "tip":"输入颜色代码(16进制)",
                 "vars":{
-                    "main":{
-                        "title":"页头页脚和主轮播图区域主色",
-                        "value":"#1b1c1f",
+                    "top":{
+                        "title":"主导航栏背景颜色",
+                        "value":"#265CA2",
                         "type":"text",
                         "tip":""
                     },
-                    "else":{
-                        "title":"左侧侧导航分级菜单",
-                        "value":"#1b1c1f",
+                    "bottom":{
+                        "title":"页脚区域配色",
+                        "value":"#265CA2",
                         "type":"text",
                         "tip":"选中一个父级菜单后显示的效果"
                     },
